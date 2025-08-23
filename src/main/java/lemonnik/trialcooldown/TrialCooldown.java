@@ -82,7 +82,6 @@ public class TrialCooldown implements ModInitializer {
 
 	private void saveConfig() {
 		try (FileWriter writer = new FileWriter(CONFIG_FILE)) {
-			writer.write("// Trial Spawner cooldown\n");
 			writer.write(GSON.toJson(CONFIG));
 		} catch (Exception e) {
 			LOGGER.error("Failed to save config", e);
